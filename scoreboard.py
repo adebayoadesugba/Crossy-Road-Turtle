@@ -40,4 +40,17 @@ class Scoreboard(Turtle):
         self.update_lives()
         self.update_scoreboard()
 
-   
+
+class PauseScreen(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.color("Black")
+        self.penup()
+        self.hideturtle()
+
+    def pause(self):
+        self.goto(0,0)
+        self.write("PAUSED", align="center", font=("Arial",30,"bold"))
+        self.goto(0,-50)
+        self.write("Press 'p' to resume", align="center", font=("Arial",15,"bold"))
+
